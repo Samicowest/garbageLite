@@ -10,8 +10,6 @@ import "./styles.css";
 import Img1 from "./assets/person1.png";
 import Img2 from "./assets/person2.jfif";
 import Img3 from "./assets/person3.jfif";
-import Img4 from "./assets/person4.jfif";
-import Img5 from "./assets/person5.jfif";
 
 type Dat = {
   id: number;
