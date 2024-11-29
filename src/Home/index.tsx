@@ -1,5 +1,4 @@
 import { Footer } from "./Footer";
-import { Partners } from "./Partners";
 import { Review } from "./Review";
 import { Uses } from "./Uses";
 import { WhyUs } from "./WhyUs";
@@ -24,7 +23,6 @@ function Home() {
         <Review>
           <SwiperPage />
         </Review>
-        {/* <Partners /> */}
         <Footer />
       </div>
     </>
