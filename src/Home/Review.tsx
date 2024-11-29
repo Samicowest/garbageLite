@@ -1,5 +1,3 @@
-import React from "react";
-
 interface ReviewProps {
   children: React.ReactNode; // Defines the type for the children prop
 }

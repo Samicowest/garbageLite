@@ -1,5 +1,3 @@
-import React from "react";
-
 import GoogleImg from "../assets/googleplay.png";
 import Apple from "../assets/applestore.png";
 

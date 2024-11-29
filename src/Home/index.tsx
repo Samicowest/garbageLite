@@ -6,7 +6,6 @@ import { Recycle } from "./Recycle";
 import { SectionNumbers } from "./SectionNumbers";
 import { Hero } from "./Hero";
 import { Navbar } from "../Navbar";
-import React from "react";
 
 import SwiperPage from "../Swiper";
 

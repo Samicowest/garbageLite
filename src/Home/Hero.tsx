@@ -1,4 +1,3 @@
-import React from "react";
 import Heros from "../assets/heroImg.jpg";
 import Apple from "../assets/applestore.png";
 import GoogleImg from "../assets/googleplay.png";
