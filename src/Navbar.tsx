@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Logo from "./assets/logo.png";
 import { RiMenu3Line } from "react-icons/ri";
 

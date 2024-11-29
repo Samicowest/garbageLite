@@ -1,4 +1,3 @@
-import React from "react";
 import Why from "../assets/whyus.jpg";
 
 export function WhyUs() {

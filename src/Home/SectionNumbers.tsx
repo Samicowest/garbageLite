@@ -1,4 +1,3 @@
-import React from "react";
 import SwiperNumber from "../SwiperNumber";
 export function SectionNumbers({}) {
   return (

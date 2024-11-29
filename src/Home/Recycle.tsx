@@ -1,4 +1,3 @@
-import React from "react";
 import Picture1 from "../assets/picture1.jpg";
 export function Recycle() {
   return (
