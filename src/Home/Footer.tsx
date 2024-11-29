@@ -8,19 +8,19 @@ export function Footer() {
     <div className="bg-black p-10 mt-16">
       <div className="flex justify-between flex-col md:flex-row items-start w-full ">
         <div className="flex flex-col gap-4 my-8">
-          <div className="overflow-hidden w-[200px] ">
+          <div className="overflow-hidden max-w-[180px] ">
             <img src={Logo} className="object-cover w-full" alt="logo" />
           </div>
           <h2 className="text-slate-200 font-extrabold text-2xl">Search Hub</h2>
           <p className="text-slate-200">lorem ipsum</p>
-          <div className="flex border border-slate-300 rounded-r-md overflow-hidden">
+          <div className="flex border border-slate-300 flex-col xm:flex-row rounded-r-md overflow-hidden">
             <input
               type="search"
               className="flex-1 px-4 py-2 bg-transparent "
               name="search"
               id=""
             />
-            <span className="border bg-slate-300 cursor-pointer text-black  px-4 py-2">
+            <span className="border bg-slate-300 cursor-pointer text-black w-full sm:w-auto px-4 py-2">
               Search
             </span>
           </div>

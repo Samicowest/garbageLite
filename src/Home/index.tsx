@@ -12,7 +12,7 @@ import SwiperPage from "../Swiper";
 function Home() {
   return (
     <>
-      <div className="bg-[#FFFFE1] w-full">
+      <div className="bg-[#FFFFE1] w-full overflow-hidden">
         <Navbar />
         <Hero />
         <SectionNumbers />
