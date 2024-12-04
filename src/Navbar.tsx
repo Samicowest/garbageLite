@@ -1,10 +1,15 @@
 import { useEffect, useRef } from "react";
 import Logo from "./assets/logo.png";
 import { RiMenu3Line } from "react-icons/ri";
+import { Link } from "react-scroll";
+import { NavLink, useLocation } from "react-router-dom";
 
 export function Navbar() {
   const navbarRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
+  const location = useLocation(); // Get the current location
+
+  const isAct = (path: string) => location.pathname === path;
 
   const toggleNavbar = () => {
     if (navbarRef.current) {
@@ -36,22 +41,81 @@ export function Navbar() {
         <div className="overflow-hidden w-[200px] h-auto">
           <img className="object-cover w-full h-full" src={Logo} alt="logo" />
         </div>
-        <div className="flex justify-between items-center gap-8">
-          <a href="#" className="relative py-2 px-4">
+        <div className="flex justify-between items-center gap-4">
+          {isAct("/") ? (
+            <Link
+              to="home"
+              smooth={true}
+              duration={500}
+              className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 "
+            >
+              Home
+            </Link>
+          ) : (
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                `relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 ${
+                  isActive ? "before:w-[60%]" : ""
+                }`
+              }
+            >
+              Home
+            </NavLink>
+          )}
+
+          <Link
+            to="aboutus"
+            smooth={true}
+            duration={500}
+            className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 "
+          >
             About Us
-          </a>
-          <a href="#" className="relative py-2 px-4">
-            Why Us
-          </a>
-          <a href="#" className="relative py-2 px-4">
+          </Link>
+          {isAct("/why") ? (
+            <NavLink
+              to="/why"
+              className={({ isActive }) =>
+                `relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 ${
+                  isActive ? "before:w-[60%]" : ""
+                }`
+              }
+            >
+              Why us
+            </NavLink>
+          ) : (
+            <Link
+              to="whyus"
+              smooth={true}
+              duration={500}
+              className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 "
+            >
+              Why us
+            </Link>
+          )}
+
+          <Link
+            to="contact"
+            smooth={true}
+            duration={500}
+            className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 "
+          >
+            Contact
+          </Link>
+          <Link
+            to="faq"
+            smooth={true}
+            duration={500}
+            className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 "
+          >
             FAQ
-          </a>
+          </Link>
         </div>
         <div className="flex justify-between items-center gap-8">
-          <div className="border-gray-400 border py-3 px-4 rounded-md cursor-pointer">
+          <div className="text-xs border-gray-400 border py-3 px-4 rounded-md cursor-pointer">
             Search for hub
           </div>
-          <div className="bg-blue-700 text-slate-300 px-5 py-3 rounded-md cursor-pointer">
+          <div className="text-xs bg-blue-700 text-slate-300 px-5 py-3 rounded-md cursor-pointer">
             Web App
           </div>
         </div>
@@ -66,15 +130,38 @@ export function Navbar() {
             ref={navbarRef}
           >
             <div className="flex flex-col">
-              <a href="#" className="relative py-2 px-4">
+              <Link
+                to="section1"
+                smooth={true}
+                duration={500}
+                className="relative py-2 px-4 w-full cursor-pointer hover:bg-slate-200"
+              >
                 About Us
-              </a>
-              <a href="#" className="relative py-2 px-4">
+              </Link>
+              <Link
+                to="section2"
+                smooth={true}
+                duration={500}
+                className="relative py-2 px-4 w-full cursor-pointer hover:bg-slate-200"
+              >
                 Why Us
-              </a>
-              <a href="#" className="relative py-2 px-4">
+              </Link>
+              <Link
+                to="contact"
+                smooth={true}
+                duration={500}
+                className="relative py-2 px-4 w-full cursor-pointer hover:bg-slate-200"
+              >
+                Contact
+              </Link>
+              <Link
+                to="section3"
+                smooth={true}
+                duration={500}
+                className="relative py-2 px-4 w-full cursor-pointer hover:bg-slate-200"
+              >
                 FAQ
-              </a>
+              </Link>
             </div>
             <div className="flex flex-col gap-4">
               <div className="border-gray-400 border py-3 px-4 rounded-md cursor-pointer">

@@ -1,11 +1,11 @@
-import Logo from "../assets/logo.png";
+import Logo from "./assets/logo.png";
 
 import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { CiFacebook, CiLinkedin } from "react-icons/ci";
 
 export function Footer() {
   return (
-    <div className="bg-black p-10 mt-16">
+    <div id="contact" className="bg-black p-10 mt-16">
       <div className="flex justify-between flex-col md:flex-row items-start w-full ">
         <div className="flex flex-col gap-4 my-8">
           <div className="overflow-hidden max-w-[180px] ">
@@ -25,7 +25,7 @@ export function Footer() {
             </span>
           </div>
         </div>
-        <div className="grid grid-cols-2 xxm:grid-cols-3 ">
+        <div className="grid w-full md:w-[65%] grid-cols-2 xxm:grid-cols-3 ">
           <div className="">
             <h2 className="font-bold text-md lg:text-xl text-white">
               Quicklinks{" "}
@@ -51,11 +51,11 @@ export function Footer() {
             <div className="flex flex-col text-white py-4 gap-2">
               <span className="text-sm">Support@garbagelite.com</span>
               <span className="text-sm">N0 47, Lorem Ipsum, Nigeria.</span>
-              <div className="flex gap-4  *:text-white *:text-xl">
-                <FaInstagram />
-                <CiFacebook />
-                <FaXTwitter />
-                <CiLinkedin />
+              <div className="flex gap-4  *:text-white ">
+                <FaInstagram className="text-xl cursor-pointer hover:text-green-400" />
+                <CiFacebook className="text-xl cursor-pointer hover:text-green-400" />
+                <FaXTwitter className="text-xl cursor-pointer hover:text-green-400" />
+                <CiLinkedin className="text-xl cursor-pointer hover:text-green-400" />
               </div>
             </div>
           </div>

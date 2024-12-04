@@ -13,7 +13,7 @@ export function Uses() {
         <div className="w-[50%] h-[280px] xm:h-[350px] md:h-auto "></div>
         <div className="w-[80%] sm:w-[50%] py-12">
           <div className="flex flex-col items-center sm:items-start gap-4">
-            <h2 className="text-[30px] text-center sm:text-left lg:text-[40px] text-white font-bold">
+            <h2 className="text-[25px] xs:text-[30px] text-center sm:text-left lg:text-[40px] text-white font-bold">
               Use your waste PlasticsPapers Cartons Metals
             </h2>
             <p className="text-sm font-light text-slate-200 text-center sm:text-left">
