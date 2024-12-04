@@ -57,7 +57,7 @@ const data: Dat[] = [
 ];
 
 // Import required modules
-import { Pagination, Autoplay } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 
 const SwiperPage: React.FC = () => {
   return (
