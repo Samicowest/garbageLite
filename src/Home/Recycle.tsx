@@ -3,9 +3,18 @@ import Picture1 from "../assets/picture1.jpg";
 export function Recycle() {
   return (
     <div id="aboutus" className="py-8  flex items-center flex-col">
-      <h2 className="text-2xl lg:text-4xl  font-bold text-slate-800 max-w-[450px] text-center py-16">
+      <h2 className="text-2xl lg:text-4xl hidden sm:block font-bold text-slate-800 max-w-[450px] text-center py-16">
         Connect with Trusted Recycling Hubs Near You
       </h2>
+      <h2 className="text-2xl mb-4 font-bold block sm:hidden text-center px-4">
+        About Us
+      </h2>
+      <p className="text-sm block sm:hidden text-center px-4 mb-12">
+        arbageLite stands out as the premier solution for modern waste
+        management. Our intuitive platform simplifies the process of waste
+        collection and recycling, providing unparalleled convenience and
+        reliability.
+      </p>
       <div className="py-4 w-full bg-[#F4FFEA] flex flex-col sm:flex-row items-center justify-center">
         <div className="overflow-hidden w-full sm:w-[600px] h-[400px] md:h-[500px] py-8 flex items-center justify-center sm:justify-end">
           <img src={Picture1} className="object-contain h-80%" alt="" />

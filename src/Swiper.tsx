@@ -71,7 +71,7 @@ const SwiperPage: React.FC = () => {
         modules={[Pagination]}
         className="mySwiper"
         breakpoints={{
-          360: {
+          560: {
             slidesPerView: 2,
             spaceBetween: 20,
           },

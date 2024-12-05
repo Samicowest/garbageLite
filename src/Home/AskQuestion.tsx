@@ -11,7 +11,7 @@ function AskQuestion() {
       <Accordion type="single" collapsible>
         <AccordionItem value="item-1">
           <AccordionTrigger>
-            <h2 className="text-center text-4xl text-slate-600 font-bold">
+            <h2 className="text-left text-4xl text-slate-600 font-bold">
               How does GarbageLite help with waste management?
             </h2>
           </AccordionTrigger>

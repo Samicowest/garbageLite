@@ -139,7 +139,7 @@ export function Navbar() {
                 About Us
               </Link>
               <Link
-                to="section2"
+                to="whyus"
                 smooth={true}
                 duration={500}
                 className="relative py-2 px-4 w-full cursor-pointer hover:bg-slate-200"

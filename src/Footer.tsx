@@ -2,6 +2,8 @@ import Logo from "./assets/logo.png";
 
 import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { CiFacebook, CiLinkedin } from "react-icons/ci";
+import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 
 export function Footer() {
   return (
@@ -31,9 +33,21 @@ export function Footer() {
               Quicklinks{" "}
             </h2>
             <div className="flex flex-col text-white py-4 gap-2">
-              <span className="text-sm">About Us</span>
-              <span className="text-sm">Why Us</span>
-              <span className="text-sm">FAQ's</span>
+              <Link
+                to="aboutus"
+                smooth={true}
+                duration={500}
+                className="test-sm "
+              >
+                About Us
+              </Link>
+
+              <NavLink to="/why" className="text-sm">
+                Why us
+              </NavLink>
+              <Link to="faq" smooth={true} duration={500} className="test-sm ">
+                FAQ's
+              </Link>
             </div>
           </div>
           <div className="">

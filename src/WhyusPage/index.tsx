@@ -5,8 +5,8 @@ function WhyUsPage() {
   return (
     <>
       <div className="flex pt-24 py-12   h-auto">
-        <div className="flex items-center ">
-          <div className="px-10 w-[50%]">
+        <div className="flex flex-col-reverse gap-4 md:gap-0 md:flex-row items-center ">
+          <div className="px-10 w-full md:w-[50%]">
             <h2 className="text-slate-700 font-bold text-2xl">Why Us</h2>
             <p className="text-sm leading-snug py-4">
               GarbageLite stands out as the premier solution for modern waste
@@ -22,9 +22,9 @@ function WhyUsPage() {
               cleaner and greener.
             </p>
           </div>
-          <div className="overflow-hidden w-[50%] h-auto">
+          <div className="overflow-hidden w-full px-4  md:px-0  md:w-[50%] h-auto">
             <img
-              className="object-contain w-full h-full rounded-l-md"
+              className="object-contain w-full h-full rounded-md md:rounded-l-md"
               src={Img1}
               alt="image1"
             />
@@ -32,15 +32,15 @@ function WhyUsPage() {
         </div>
       </div>
       <div className="flex  py-12   h-auto">
-        <div className="flex items-center ">
-          <div className="overflow-hidden w-[50%] h-auto rounded-r-md">
+        <div className="flex flex-col gap-4 md:gap-0 md:flex-row items-center ">
+          <div className="overflow-hidden px-4 md:px-0 w-full md:w-[50%] h-auto rounded-r-md">
             <img
-              className="object-cover w-full h-full rounded-r-md"
+              className="object-cover w-full h-full rounded-md md:rounded-r-md"
               src={Img2}
               alt="image1"
             />
           </div>
-          <div className="px-10 w-[50%]">
+          <div className="px-10 w-full md:w-[50%]">
             <h2 className="text-slate-700 font-bold text-2xl">Core Values</h2>
             <div className="my-1">
               <span className="text-slate-700 font-bold text-sm">

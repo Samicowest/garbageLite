@@ -1,10 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  RouteObject,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import Root from "./Root";
 import ErrorPage from "./ErrorPage";
@@ -12,25 +8,24 @@ import Home from "./Home";
 import WhyUsPage from "./WhyusPage";
 
 // Define the type for routes
-const routes: RouteObject[] = [
+
+export const router = createBrowserRouter([
   {
-    path: "/",
     element: <Root />,
     children: [
       {
         path: "/",
         element: <Home />,
+        errorElement: <ErrorPage />,
       },
       {
         path: "/why",
         element: <WhyUsPage />,
+        errorElement: <ErrorPage />,
       },
     ],
-    errorElement: <ErrorPage />,
   },
-];
-
-const router = createBrowserRouter(routes);
+]);
 
 const rootElement = document.getElementById("root");
 if (!rootElement) {
