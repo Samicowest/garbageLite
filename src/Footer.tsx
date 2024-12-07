@@ -76,7 +76,7 @@ export function Footer() {
         </div>
       </div>
       <div className="text-center text-white font-bold text-sm mt-16 mb-2">
-        2024 | GarbageLite
+        2024 | GarbageLitee
       </div>
     </div>
   );
