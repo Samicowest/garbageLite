@@ -7,6 +7,7 @@ import { Hero } from "./Hero";
 
 import SwiperPage from "../Swiper";
 import CustomAccordion from "./CustomAccordion";
+import Overlay from "./Overlay";
 
 function Home() {
   return (
@@ -20,6 +21,7 @@ function Home() {
         <SwiperPage />
       </Review>
       <CustomAccordion />
+      <Overlay />
     </>
   );
 }

@@ -3,13 +3,20 @@ import Logo from "./assets/logo.png";
 import { RiMenu3Line } from "react-icons/ri";
 import { Link } from "react-scroll";
 import { NavLink, useLocation } from "react-router-dom";
+import { useDataContext } from "./service/context";
 
 export function Navbar() {
   const navbarRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const location = useLocation(); // Get the current location
+  const { toggleOverlay } = useDataContext();
 
   const isAct = (path: string) => location.pathname === path;
+
+  const resToggleOverlay = () => {
+    toggleNavbar();
+    toggleOverlay();
+  };
 
   const toggleNavbar = () => {
     if (navbarRef.current) {
@@ -112,9 +119,12 @@ export function Navbar() {
           </Link>
         </div>
         <div className="flex justify-between items-center gap-8">
-          <div className="text-xs border-gray-400 border py-3 px-4 rounded-md cursor-pointer">
-            Search for hub
-          </div>
+          <button
+            onClick={toggleOverlay}
+            className="text-white bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600 transition"
+          >
+            Recycling Hub
+          </button>
           <div className="text-xs bg-blue-700 text-slate-300 px-5 py-3 rounded-md cursor-pointer">
             Web App
           </div>
@@ -164,10 +174,13 @@ export function Navbar() {
               </Link>
             </div>
             <div className="flex flex-col gap-4">
-              <div className="border-gray-400 border py-3 px-4 rounded-md cursor-pointer">
-                Search for hub
-              </div>
-              <div className="bg-blue-700 text-slate-300 px-5 py-3 rounded-md cursor-pointer">
+              <button
+                onClick={resToggleOverlay}
+                className="text-white bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600 transition"
+              >
+                Recycling Hub
+              </button>
+              <div className="bg-blue-500 text-white text-center px-4 py-2 rounded-md cursor-pointer">
                 Web App
               </div>
             </div>
