@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, ReactNode } from "react";
 import { HubData } from "@/type/dataType";
-import { data as dadas } from "./data";
+import { data } from "./data";
 
 // Define the structure of your context
 interface DataContextType {
@@ -19,7 +19,6 @@ interface DataProviderProps {
 
 // DataProvider component
 export const DataProvider = ({ children }: DataProviderProps): JSX.Element => {
-  const [data, setData] = useState<HubData[]>(dadas);
   const [overlayVisible, setOverlayVisible] = useState(true);
 
   const toggleOverlay = () => {
