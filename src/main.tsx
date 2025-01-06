@@ -1,10 +1,6 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Navigate,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "./index.css";
 import Root from "./Root";
@@ -16,9 +12,6 @@ import Login from "./Login";
 import Register from "./register";
 import HubSearch from "./HubSearch";
 import ProtectedRoute from "./ProtectedRoute";
-import { onAuthStateChanged } from "firebase/auth";
-import { useEffect, useState } from "react";
-import { auth } from "./firebaseConfig";
 import { UserAuthProvider } from "./context/AuthContext";
 
 // Define the type for routes
