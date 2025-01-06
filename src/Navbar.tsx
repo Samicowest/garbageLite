@@ -2,20 +2,48 @@ import { useEffect, useRef } from "react";
 import Logo from "./assets/logo.png";
 import { RiMenu3Line } from "react-icons/ri";
 import { Link } from "react-scroll";
-import { NavLink, useLocation } from "react-router-dom";
-import { useDataContext } from "./service/context";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { useUserAuth } from "./context/AuthContext";
+import defaultImage from "./assets/default.png";
+import userImage from "./assets/person1.png";
+import {
+  DropdownMenu,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+} from "./components/ui/dropdown-menu";
 
 export function Navbar() {
   const navbarRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const location = useLocation(); // Get the current location
-  const { toggleOverlay } = useDataContext();
-
+  const navigate = useNavigate();
   const isAct = (path: string) => location.pathname === path;
 
-  const resToggleOverlay = () => {
-    toggleNavbar();
-    toggleOverlay();
+  const { user, logout } = useUserAuth();
+
+  // const handleLogin = async () => {
+  //   try {
+  //     await login("user@example.com", "password");
+  //     alert("Login successful");
+  //   } catch (error) {
+  //     console.error("Error logging in:", error);
+  //     alert("Error logging in");
+  //   }
+  // };
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+      alert("Logout successful");
+    } catch (error) {
+      console.error("Error logging out:", error);
+      alert("Error logging out");
+    }
+  };
+
+  const handleButtonClick = () => {
+    navigate("/hubsearch");
   };
 
   const toggleNavbar = () => {
@@ -120,13 +148,43 @@ export function Navbar() {
         </div>
         <div className="flex justify-between items-center gap-8">
           <button
-            onClick={toggleOverlay}
+            onClick={handleButtonClick}
             className="text-white bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600 transition"
           >
             Recycling Hub
           </button>
           <div className="text-xs bg-blue-700 text-slate-300 px-5 py-3 rounded-md cursor-pointer">
             Web App
+          </div>
+          <div className="relative inline-block text-left">
+            <DropdownMenu>
+              <DropdownMenuTrigger className="rounded-full w-10 h-10 border-none hover:border-none overflow-hidden">
+                <img
+                  className="w-full h-full object-cover"
+                  src={user ? userImage : defaultImage}
+                  alt="User Avatar"
+                />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="absolute right-[-30px] mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg">
+                {user ? (
+                  <>
+                    <DropdownMenuItem>
+                      {user.displayName || `${user.firstName} ${user.lastName}`}
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={handleLogout}>
+                      Logout
+                    </DropdownMenuItem>
+                  </>
+                ) : (
+                  <DropdownMenuItem
+                    className="cursor-pointer"
+                    onClick={() => navigate("/login")}
+                  >
+                    Login
+                  </DropdownMenuItem>
+                )}
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </div>
       </nav>
@@ -175,7 +233,7 @@ export function Navbar() {
             </div>
             <div className="flex flex-col gap-4">
               <button
-                onClick={resToggleOverlay}
+                onClick={handleButtonClick}
                 className="text-white bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600 transition"
               >
                 Recycling Hub
@@ -185,13 +243,43 @@ export function Navbar() {
               </div>
             </div>
           </div>
-          <button
-            className="lg:hidden py-2"
-            ref={buttonRef}
-            onClick={toggleNavbar}
-          >
-            <RiMenu3Line className="text-lg" />
-          </button>
+          <div className="relative  flex items-center gap-4 text-left">
+            <DropdownMenu>
+              <DropdownMenuTrigger className="rounded-full w-10 h-10 border-none hover:border-none overflow-hidden">
+                <img
+                  className="w-full h-full object-cover"
+                  src={user ? userImage : defaultImage}
+                  alt="User Avatar"
+                />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="absolute right-[-30px] mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg">
+                {user ? (
+                  <>
+                    <DropdownMenuItem>
+                      {user.displayName || `${user.firstName} ${user.lastName}`}
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={handleLogout}>
+                      Logout
+                    </DropdownMenuItem>
+                  </>
+                ) : (
+                  <DropdownMenuItem
+                    className="cursor-pointer"
+                    onClick={() => navigate("/login")}
+                  >
+                    Login
+                  </DropdownMenuItem>
+                )}
+              </DropdownMenuContent>
+            </DropdownMenu>
+            <button
+              className="lg:hidden py-2"
+              ref={buttonRef}
+              onClick={toggleNavbar}
+            >
+              <RiMenu3Line className="text-lg" />
+            </button>
+          </div>
         </div>
       </div>
     </>
