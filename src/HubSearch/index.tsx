@@ -1,18 +1,20 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { data } from "@/service/data";
+import CustomSelect from "@/CustomSelect";
 import AddressOverlay from "@/AddressOverlay";
-const HubSearch = () => {
+
+const HubSearch: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [address, setAddress] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedState, setSelectedState] = useState("All");
+  const options = [
+    { value: "All", label: "All States" },
+    { value: "Lagos", label: "Lagos" },
+    { value: "Ogun", label: "Ogun" },
+    { value: "Ibadan", label: "Ibadan" },
+  ];
 
-  const handleClick = (add: string) => {
-    setIsOpen(true);
-    setAddress(add);
-  };
-
-  // Filter based on both state and fruit
   const filteredItems = data.filter((item) => {
     const matchesState =
       selectedState === "All" || item.state === selectedState;
@@ -22,31 +24,33 @@ const HubSearch = () => {
     return matchesState && matchesFruit;
   });
 
+  const handleClick = (add: string) => {
+    setIsOpen(true);
+    setAddress(add);
+  };
+
   return (
     <>
-      <div className="pt-[50px]">
+      <div className="pt-[50px] mt-[20px]">
         <div
           className="bg-white p-6 rounded-lg mx-auto shadow-xl w-[90%] sm:w-[80%] md:w-[60%]"
           onClick={(e) => e.stopPropagation()}
         >
-          <input
-            type="text"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search for recycling..."
-            className="w-full p-2 border border-gray-300 rounded-lg mb-4"
-          />
+          <div className="flex flex-col md:flex-row gap-4 ">
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search for recycling..."
+              className="w-full md:w-[70%] p-2 border border-gray-300 rounded-lg mb-4"
+            />
 
-          <select
-            value={selectedState}
-            onChange={(e) => setSelectedState(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded-lg mb-4"
-          >
-            <option value="All">All States</option>
-            <option value="Lagos">Lagos</option>
-            <option value="Ogun">Ogun</option>
-            <option value="Ibadan">Ibadan</option>
-          </select>
+            <CustomSelect
+              value={selectedState}
+              onChange={(e) => setSelectedState(e.target.value)}
+              options={options}
+            />
+          </div>
 
           <ul className="max-h-80 overflow-y-auto">
             {filteredItems.length > 0 ? (
@@ -60,7 +64,9 @@ const HubSearch = () => {
                 </li>
               ))
             ) : (
-              <li className="p-2 text-gray-500">No items found</li>
+              <li className="p-2 bg-gray-100 rounded-lg mb-2">
+                No items found
+              </li>
             )}
           </ul>
         </div>

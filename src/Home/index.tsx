@@ -3,15 +3,14 @@ import { Uses } from "./Uses";
 import { WhyUs } from "./WhyUs";
 import { Recycle } from "./Recycle";
 import { SectionNumbers } from "./SectionNumbers";
-import { Hero } from "./Hero";
-
+import HeroSlides from "@/HeroSlides";
 import SwiperPage from "../Swiper";
 import CustomAccordion from "./CustomAccordion";
 
 function Home() {
   return (
     <>
-      <Hero />
+      <HeroSlides />
       <SectionNumbers />
       <Recycle />
       <WhyUs />

@@ -1,7 +1,7 @@
 import GoogleImg from "../assets/googleplay.png";
 import Apple from "../assets/applestore.png";
 
-import Phone from "../assets/phonePic2.png";
+import Phone from "../assets/phone3.png";
 
 export function Uses() {
   return (

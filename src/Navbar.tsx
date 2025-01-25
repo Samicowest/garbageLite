@@ -44,6 +44,7 @@ export function Navbar() {
 
   const handleButtonClick = () => {
     navigate("/hubsearch");
+    toggleNavbar();
   };
 
   const toggleNavbar = () => {
@@ -149,7 +150,7 @@ export function Navbar() {
         <div className="flex justify-between items-center gap-8">
           <button
             onClick={handleButtonClick}
-            className="text-white bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600 transition"
+            className="text-gray-700 hover:text-white border border-blue-50 px-4 py-2 rounded-lg hover:bg-blue-600 transition"
           >
             Recycling Hub
           </button>

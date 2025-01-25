@@ -12,20 +12,28 @@ export function WhyUs() {
         <div className="overflow-hidden w-full flex-1 h-[500px] py-8 flex justify-end">
           <img src={Why} className="object-contain h-80%" alt="" />
         </div>
-        <div className="w-full flex flex-col items-center sm:item-start md:w-[500px] px-8">
-          <h2 className="text-xl sm:text-[25px] mb-10 md:mb-2 sm:text-[30px] md:text-[45px] font-bold leading-tight text-center sm:text-left">
-            Use your waste Plastics Papers Cartons Metals
-          </h2>
-          <p className="text-lighter mb-8 text-sm text-center sm:text-left ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-            rem soluta voluptatem officia. Dolorem, consectetur.
+        <div className="w-full flex flex-col  sm:item-start md:w-[500px] px-8">
+          <p className="text-lighter mb-8 text-md text-center sm:text-left ">
+            GarbageLite stands out as the premier solution for modern waste
+            management. Our intuitive platform simplifies the process of waste
+            collection and recycling, providing unparalleled convenience and
+            reliability.
           </p>
-          <NavLink
-            to="/why"
-            className="font-bold text-sm py-2 px-8 bg-blue-600 text-slate-200 rounded-md"
-          >
-            More
-          </NavLink>
+          <p className="text-lighter mb-8 text-md text-center sm:text-left ">
+            We bridge the gap between individuals and eco-friendly waste
+            disposal, ensuring that sustainability is not just a concept but an
+            everyday practice. Choose us for our innovative approach,
+            user-focused features, and commitment to making your environment
+            cleaner and greener.
+          </p>
+          <div className="py-2">
+            <NavLink
+              to="/why"
+              className="font-bold text-sm py-2 px-8 bg-blue-600 text-slate-200 rounded-md"
+            >
+              More
+            </NavLink>
+          </div>
         </div>
       </div>
     </div>

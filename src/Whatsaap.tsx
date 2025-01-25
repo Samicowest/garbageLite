@@ -34,7 +34,7 @@ const ScrollAwareBox: React.FC = () => {
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
-      Chat
+      Connect with us
       <FaWhatsapp />
     </a>
   );

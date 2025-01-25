@@ -19,40 +19,33 @@ type Dat = {
 const data: Dat[] = [
   {
     id: 1,
-    name: "Samson",
-    title: "Developer",
-    desc: " Totam expedita laudantium repellendus tempora nisi doloremque.",
+    name: "Adebayo T.",
+    title: "Ibadan",
+    desc: " GarbageLite has made waste management so simple! Scheduling pickups is a breeze, and I love knowing my recycling efforts are making a real difference. Highly recommended!.",
     img: <img src={Img1} className="object-cover w-full h-full" alt="Samson" />,
   },
   {
     id: 2,
-    name: "Emmanuel",
-    title: "Writer",
-    desc: " Totam expedita laudantium repellendus tempora nisi doloremque.",
+    name: "Chidera M.",
+    title: "Lagos",
+    desc: "The user experience is fantastic. No more dealing with unreliable waste collectors. GarbageLite ensures everything is transparent and timely. It’s a game-changer!",
     img: (
       <img src={Img2} className="object-cover w-full h-full" alt="Emmanuel" />
     ),
   },
   {
     id: 3,
-    name: "Samuel",
-    title: "Product Manager",
-    desc: " Totam expedita laudantium repellendus tempora nisi doloremque.",
+    name: "Fatima O.",
+    title: "Abuja",
+    desc: " I’ve always struggled with recycling, but GarbageLite's clear guidelines and easy-to-use platform have helped me adopt sustainable practices effortlessly.",
     img: <img src={Img3} className="object-cover w-full h-full" alt="Samuel" />,
   },
   {
     id: 4,
-    name: "Emmanuel",
-    title: "Web Designer",
-    desc: " Totam expedita laudantium repellendus tempora nisi doloremque.",
+    name: "Tolu B.",
+    title: "Business Owner, Ibadan",
+    desc: " Our business has reduced waste disposal costs significantly by using GarbageLite. The partnership opportunities and support are top-notch!",
     img: <img src={Img1} className="object-cover w-full h-full" alt="Samuel" />,
-  },
-  {
-    id: 5,
-    name: "Great",
-    title: "Content Creator",
-    desc: " Totam expedita laudantium repellendus tempora nisi doloremque.",
-    img: <img src={Img2} className="object-cover w-full h-full" alt="Samuel" />,
   },
 ];
 
