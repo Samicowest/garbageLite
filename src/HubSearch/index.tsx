@@ -12,7 +12,6 @@ const HubSearch: React.FC = () => {
     { value: "All", label: "All States" },
     { value: "Lagos", label: "Lagos" },
     { value: "Ogun", label: "Ogun" },
-    { value: "Ibadan", label: "Ibadan" },
   ];
 
   const filteredItems = data.filter((item) => {
