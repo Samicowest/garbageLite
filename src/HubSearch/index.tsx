@@ -17,10 +17,8 @@ const HubSearch: React.FC = () => {
 
   const filteredItems = data.filter((item) => {
     const matchesState =
-      selectedState === "All" || item.state === selectedState;
-    const matchesFruit = item.hub_name
-      .toLowerCase()
-      .includes(searchQuery.toLowerCase());
+      selectedState === "All" || item.state === selectedState ;
+    const matchesFruit = item.hub_name.toLowerCase().includes(searchQuery.toLowerCase()) || item.state.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesState && matchesFruit;
   });
 
@@ -60,7 +58,7 @@ const HubSearch: React.FC = () => {
                   className="p-2 bg-gray-100 rounded-lg mb-2 hover:bg-gray-200 cursor-pointer"
                   onClick={() => handleClick(item.address)}
                 >
-                  {item.hub_name} - {item.lga}
+                  {item.hub_name} - {item.lga} - {item.state}
                 </li>
               ))
             ) : (
