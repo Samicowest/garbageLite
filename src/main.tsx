@@ -13,6 +13,7 @@ import Register from "./register";
 import HubSearch from "./HubSearch";
 import ProtectedRoute from "./ProtectedRoute";
 import { UserAuthProvider } from "./context/AuthContext";
+import FramerDisplay from "./Framer/FramerDisplay";
 
 // Define the type for routes
 const queryClient = new QueryClient();
@@ -51,6 +52,11 @@ export const router = createBrowserRouter([
   {
     path: "/register",
     element: <Register />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/framer",
+    element: <FramerDisplay />,
     errorElement: <ErrorPage />,
   },
 ]);
