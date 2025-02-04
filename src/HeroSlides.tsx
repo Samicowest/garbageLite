@@ -47,7 +47,9 @@ const HeroSlides: React.FC = () => {
                   <h2 className="md:text-5xl min-w-[350px] max-w-[450px]   md:leading-snug  text-4xl text-[#0B2027] font-bold">
                     {dat.title}
                   </h2>
-                  <p className="text-sm sm:text-md  py-4">{dat.desc}</p>
+                  <p className="text-md md:text-xl 2xl:text-3xl py-4">
+                    {dat.desc}
+                  </p>
                 </div>
                 <div className="flex justify-start text-right">
                   <div className=" w-[400px] ">

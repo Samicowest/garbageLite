@@ -78,15 +78,17 @@ const SwiperPage: React.FC = () => {
           <SwiperSlide key={dat.id}>
             <div className="py-8 px-8 bg-[#ECECEC] rounded-md">
               <div className="flex flex-col ">
-                <p className="text-sm  text-left text-light">{dat.desc}</p>
+                <p className="text-md md:text-xl  text-left text-light">
+                  {dat.desc}
+                </p>
                 <div className="flex justify-between items-center mt-12">
                   <div className="">
-                    <h2 className=" font-bold text-left text-xl">{dat.name}</h2>
-                    <p className=" text-sm text-left text-light ">
+                    <h2 className=" font-bold text-left text-lg">{dat.name}</h2>
+                    <p className=" text-md md:text-xl text-left text-light ">
                       {dat.title}
                     </p>
                   </div>
-                  <div className="overflow-hidden rounded-full w-10 h-10">
+                  <div className="overflow-hidden rounded-full w-16 h-16">
                     {dat.img}
                   </div>
                 </div>

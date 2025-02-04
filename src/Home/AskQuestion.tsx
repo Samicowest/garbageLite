@@ -16,7 +16,7 @@ function AskQuestion() {
             </h2>
           </AccordionTrigger>
           <AccordionContent>
-            <p className="text-center text-md text-slate-800">
+            <p className="text-left text-md text-lg:text-xl xl:text-2xl text-slate-800">
               GarbageLite provides a seamless platform to schedule waste
               collection, track recycling activities, and access eco-friendly
               resources. We connect users with reliable waste management
@@ -26,12 +26,12 @@ function AskQuestion() {
         </AccordionItem>
         <AccordionItem value="item-2">
           <AccordionTrigger>
-            <h2 className="text-center text-4xl text-slate-600 font-bold">
+            <h2 className="text-left text-4xl text-slate-600 font-bold">
               Can I track my waste collection schedule?
             </h2>
           </AccordionTrigger>
           <AccordionContent>
-            <p className="text-center text-md text-slate-800">
+            <p className="text-left text-md text-lg:text-xl xl:text-2xl text-slate-800">
               GarbageLite provides a seamless platform to schedule waste
               collection, track recycling activities, and access eco-friendly
               resources. We connect users with reliable waste management
@@ -41,12 +41,12 @@ function AskQuestion() {
         </AccordionItem>
         <AccordionItem value="item-3">
           <AccordionTrigger>
-            <h2 className="text-center text-4xl text-slate-600 font-bold">
+            <h2 className="text-left text-4xl text-slate-600 font-bold">
               What types of waste can I recycle with GarbageLite?
             </h2>
           </AccordionTrigger>
           <AccordionContent>
-            <p className="text-center text-md text-slate-800">
+            <p className="text-left text-md text-lg:text-xl xl:text-2xl text-slate-800">
               GarbageLite provides a seamless platform to schedule waste
               collection, track recycling activities, and access eco-friendly
               resources. We connect users with reliable waste management
@@ -56,12 +56,12 @@ function AskQuestion() {
         </AccordionItem>
         <AccordionItem value="item-4">
           <AccordionTrigger>
-            <h2 className="text-center text-4xl text-slate-600 font-bold">
+            <h2 className="text-left text-4xl text-slate-600 font-bold">
               Is there a mobile app available?
             </h2>
           </AccordionTrigger>
           <AccordionContent>
-            <p className="text-center text-md text-slate-800">
+            <p className="text-left text-md text-lg:text-xl xl:text-2xl text-slate-800">
               GarbageLite provides a seamless platform to schedule waste
               collection, track recycling activities, and access eco-friendly
               resources. We connect users with reliable waste management
@@ -71,12 +71,12 @@ function AskQuestion() {
         </AccordionItem>
         <AccordionItem value="item-2">
           <AccordionTrigger>
-            <h2 className="text-center text-4xl text-slate-600 font-bold">
+            <h2 className="text-left text-4xl text-slate-600 font-bold">
               How do I get started with GarbageLite?
             </h2>
           </AccordionTrigger>
           <AccordionContent>
-            <p className="text-center text-md text-slate-800">
+            <p className="text-left text-md text-lg:text-xl xl:text-2xl text-slate-800">
               GarbageLite provides a seamless platform to schedule waste
               collection, track recycling activities, and access eco-friendly
               resources. We connect users with reliable waste management
