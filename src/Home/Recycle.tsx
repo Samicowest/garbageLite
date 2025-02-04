@@ -20,7 +20,7 @@ export function Recycle() {
           <img src={Picture1} className="object-contain " alt="" />
         </div>
 
-        <div className="rounded-l-2xl hidden  bg-[#69B022] w-full sm:w-[45%] py-4 px-8 sm:flex flex-col gap-8">
+        <div className="rounded-l-2xl hidden  bg-[#69B022] w-full md: w-1/2  py-4 px-8 sm:flex flex-col gap-8">
           <h2 className="text-[20px] md:text-[30px] lg:text-[50px] font-bold text-slate-100 leading-snug">
             About Us
           </h2>

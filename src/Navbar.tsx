@@ -83,7 +83,7 @@ export function Navbar() {
               to="home"
               smooth={true}
               duration={500}
-              className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 "
+              className="relative py-2 px-4  before:absolute text-sm lg:text-md xl:text-xl cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 "
             >
               Home
             </Link>
@@ -91,7 +91,7 @@ export function Navbar() {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 ${
+                `relative py-2 px-4  before:absolute text-sm lg:text-md xl:text-xl cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 ${
                   isActive ? "before:w-[60%]" : ""
                 }`
               }
@@ -104,7 +104,7 @@ export function Navbar() {
             to="aboutus"
             smooth={true}
             duration={500}
-            className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 "
+            className="relative py-2 px-4  before:absolute text-sm lg:text-md xl:text-xl cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 "
           >
             About Us
           </Link>
@@ -112,7 +112,7 @@ export function Navbar() {
             <NavLink
               to="/why"
               className={({ isActive }) =>
-                `relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 ${
+                `relative py-2 px-4  before:absolute text-sm lg:text-md xl:text-xl cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 ${
                   isActive ? "before:w-[60%]" : ""
                 }`
               }
@@ -124,7 +124,7 @@ export function Navbar() {
               to="whyus"
               smooth={true}
               duration={500}
-              className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 "
+              className="relative py-2 px-4  before:absolute text-sm lg:text-md xl:text-xl cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 "
             >
               Why us
             </Link>
@@ -134,7 +134,7 @@ export function Navbar() {
             to="contact"
             smooth={true}
             duration={500}
-            className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 "
+            className="relative py-2 px-4  before:absolute text-sm lg:text-md xl:text-xl cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 "
           >
             Contact
           </Link>
@@ -142,7 +142,7 @@ export function Navbar() {
             to="faq"
             smooth={true}
             duration={500}
-            className="relative py-2 px-4  before:absolute text-xs lg:text-sm cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 "
+            className="relative py-2 px-4  before:absolute text-sm lg:text-md xl:text-xl cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 "
           >
             FAQ
           </Link>
@@ -154,7 +154,7 @@ export function Navbar() {
           >
             Recycling Hub
           </button>
-          <div className="text-xs bg-blue-700 text-slate-300 px-5 py-3 rounded-md cursor-pointer">
+          <div className="text-sm lg:text-md xl:text-xl bg-blue-500  text-slate-300 px-4 py-2 rounded-md cursor-pointer">
             Web App
           </div>
           <div className="relative inline-block text-left">
