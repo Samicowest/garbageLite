@@ -17,6 +17,7 @@ export default {
         textHead: "35px",
       },
       colors: {
+        primary: "#00458A",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

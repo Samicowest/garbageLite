@@ -32,7 +32,7 @@ export function Footer() {
         </div>
         <div className="grid w-full md:w-[65%] grid-cols-2 xxm:grid-cols-3 ">
           <div className="">
-            <h2 className="font-bold text-md md:text-xl lg:text-4xl text-white">
+            <h2 className="font-bold text-md md:text-xl lg:text-2xl text-white">
               Quicklinks{" "}
             </h2>
             <div className="flex flex-col text-white py-4 gap-2">
@@ -54,7 +54,7 @@ export function Footer() {
             </div>
           </div>
           <div className="">
-            <h2 className="font-bold text-md md:text-xl lg:text-4xl text-white">
+            <h2 className="font-bold text-md md:text-xl lg:text-2xl text-white">
               Company
             </h2>
             <div className="flex flex-col text-white py-4 gap-2">
@@ -64,7 +64,7 @@ export function Footer() {
             </div>
           </div>
           <div className="">
-            <h2 className="font-bold text-md md:text-xl lg:text-4xl text-white">
+            <h2 className="font-bold text-md md:text-xl lg:text-2xl text-white">
               Contact Us
             </h2>
             <div className="flex flex-col text-white py-4 gap-2">

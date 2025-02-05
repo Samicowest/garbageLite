@@ -13,6 +13,17 @@ import {
   DropdownMenuContent,
 } from "./components/ui/dropdown-menu";
 
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogContent,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+import { Button } from "@/components/ui/button";
+
 export function Navbar() {
   const navbarRef = useRef<HTMLDivElement | null>(null);
   const buttonRef = useRef<HTMLButtonElement | null>(null);
@@ -83,7 +94,7 @@ export function Navbar() {
               to="home"
               smooth={true}
               duration={500}
-              className="relative py-2 px-4  before:absolute text-sm lg:text-md xl:text-xl cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 "
+              className="relative py-2 px-4  before:absolute text-sm lg:text-md xl:text-lg cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 "
             >
               Home
             </Link>
@@ -91,7 +102,7 @@ export function Navbar() {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                `relative py-2 px-4  before:absolute text-sm lg:text-md xl:text-xl cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 ${
+                `relative py-2 px-4  before:absolute text-sm lg:text-md xl:text-lg cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 ${
                   isActive ? "before:w-[60%]" : ""
                 }`
               }
@@ -104,7 +115,7 @@ export function Navbar() {
             to="aboutus"
             smooth={true}
             duration={500}
-            className="relative py-2 px-4  before:absolute text-sm lg:text-md xl:text-xl cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 "
+            className="relative py-2 px-4  before:absolute text-sm lg:text-md xl:text-lg cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 "
           >
             About Us
           </Link>
@@ -112,7 +123,7 @@ export function Navbar() {
             <NavLink
               to="/why"
               className={({ isActive }) =>
-                `relative py-2 px-4  before:absolute text-sm lg:text-md xl:text-xl cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 ${
+                `relative py-2 px-4  before:absolute text-sm lg:text-md xl:text-lg cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 ${
                   isActive ? "before:w-[60%]" : ""
                 }`
               }
@@ -124,7 +135,7 @@ export function Navbar() {
               to="whyus"
               smooth={true}
               duration={500}
-              className="relative py-2 px-4  before:absolute text-sm lg:text-md xl:text-xl cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 "
+              className="relative py-2 px-4  before:absolute text-sm lg:text-md xl:text-lg cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 "
             >
               Why us
             </Link>
@@ -134,7 +145,7 @@ export function Navbar() {
             to="contact"
             smooth={true}
             duration={500}
-            className="relative py-2 px-4  before:absolute text-sm lg:text-md xl:text-xl cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 "
+            className="relative py-2 px-4  before:absolute text-sm lg:text-md xl:text-lg cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 "
           >
             Contact
           </Link>
@@ -142,7 +153,7 @@ export function Navbar() {
             to="faq"
             smooth={true}
             duration={500}
-            className="relative py-2 px-4  before:absolute text-sm lg:text-md xl:text-xl cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 "
+            className="relative py-2 px-4  before:absolute text-sm lg:text-md xl:text-lg cursor-pointer before:bottom-0 before:left-1/2 before:-translate-x-1/2 before:w-[0%] transition-all duration-200 hover:before:w-[60%] before:h-[2px] before:bg-green-600 "
           >
             FAQ
           </Link>
@@ -150,13 +161,32 @@ export function Navbar() {
         <div className="flex justify-between items-center gap-8">
           <button
             onClick={handleButtonClick}
-            className="text-gray-700 hover:text-white border border-blue-50 px-4 py-2 rounded-lg hover:bg-blue-600 transition"
+            className="text-gray-700 hover:text-white border border-blue-50 px-4 py-2 rounded-lg hover:bg-primary transition"
           >
             Recycling Hub
           </button>
-          <div className="text-sm lg:text-md xl:text-xl bg-blue-500  text-slate-300 px-4 py-2 rounded-md cursor-pointer">
-            Web App
-          </div>
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <Button
+                variant="outline"
+                className="bg-primary text-white text-center px-4 py-2 rounded-md cursor-pointer"
+              >
+                Web App
+              </Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>
+                  <div className="font-bold text-2xl text-red-400">
+                    WebApp Under Construction, it will be available soon!!!
+                  </div>
+                </AlertDialogTitle>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogAction>Ok</AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
           <div className="relative inline-block text-left">
             <DropdownMenu>
               <DropdownMenuTrigger className="rounded-full w-10 h-10 border-none hover:border-none overflow-hidden">
@@ -235,13 +265,36 @@ export function Navbar() {
             <div className="flex flex-col gap-4">
               <button
                 onClick={handleButtonClick}
-                className="text-white bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-600 transition"
+                className="text-white bg-primary px-4 py-2 rounded-lg hover:bg-blue-600 transition"
               >
                 Recycling Hub
               </button>
-              <div className="bg-blue-500 text-white text-center px-4 py-2 rounded-md cursor-pointer">
+              {/* <div className="">
                 Web App
-              </div>
+              </div> */}
+              <AlertDialog>
+                <AlertDialogTrigger asChild>
+                  <Button
+                    variant="outline"
+                    className="bg-primary text-white text-center px-4 py-2 rounded-md cursor-pointer"
+                  >
+                    Web App
+                  </Button>
+                </AlertDialogTrigger>
+                <AlertDialogContent>
+                  <AlertDialogHeader>
+                    <AlertDialogTitle>
+                      <div className="font-bold text-2xl text-red-400">
+                        WebApp Under Construction, it will be available soon!!!
+                      </div>
+                    </AlertDialogTitle>
+                  </AlertDialogHeader>
+                  <AlertDialogFooter>
+                    {/* <AlertDialogCancel>Cancel</AlertDialogCancel> */}
+                    <AlertDialogAction>Ok</AlertDialogAction>
+                  </AlertDialogFooter>
+                </AlertDialogContent>
+              </AlertDialog>
             </div>
           </div>
           <div className="relative  flex items-center gap-4 text-left">

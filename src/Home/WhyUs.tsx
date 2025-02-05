@@ -29,9 +29,9 @@ export function WhyUs() {
           <div className="py-2">
             <NavLink
               to="/why"
-              className="font-bold text-md lg:text-xl py-2 px-8 bg-blue-600 text-slate-200 rounded-md"
+              className="font-bold text-md lg:text-xl py-2 px-8 bg-primary text-slate-200 rounded-md"
             >
-              More...
+              Show More...
             </NavLink>
           </div>
         </div>

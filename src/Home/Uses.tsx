@@ -13,8 +13,8 @@ export function Uses() {
         <div className="w-[50%] h-[280px] xm:h-[350px] md:h-auto "></div>
         <div className="w-[80%] sm:w-[50%] py-12">
           <div className="flex flex-col items-center sm:items-start gap-4">
-            <h2 className="text-2xl xs:text-3xl text-center sm:text-left lg:text-4xl text-white font-bold">
-              Use your waste PlasticsPapers Cartons Metals
+            <h2 className="text-2xl xs:text-3xl text-center sm:text-left lg:text-6xl text-white font-bold">
+              Connect with Trusted Recycling Hubs Near You.
             </h2>
             <p className="text-lg md:text-2xl font-semibold text-slate-200 text-center sm:text-left">
               Lorem ipsum dolor sit amet, consectetur adipiscingelit, sed do
