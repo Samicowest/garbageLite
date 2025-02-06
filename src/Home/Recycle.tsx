@@ -1,4 +1,4 @@
-import Picture1 from "../assets/picture1.jpg";
+import Picture1 from "../assets/about_us.png";
 
 export function Recycle() {
   return (
@@ -16,10 +16,6 @@ export function Recycle() {
         reliability.
       </p>
       <div className="w-full bg-[#F4FFEA] flex flex-col sm:flex-row items-center justify-center">
-        <div className="overflow-hidden w-full sm:w-[600px] h-[400px] md:h-[500px]  flex items-center justify-center sm:justify-end">
-          <img src={Picture1} className="object-contain " alt="" />
-        </div>
-
         <div className="rounded-l-2xl hidden  bg-[#69B022] w-full md:w-1/2  py-4 px-8 sm:flex flex-col gap-8">
           <h2 className="text-[20px] md:text-[30px] lg:text-[50px] font-bold text-slate-100 leading-snug">
             About Us
@@ -42,6 +38,9 @@ export function Recycle() {
             digital waste management, fostering sustainable habits and reducing
             environmental impact globally."
           </p>
+        </div>
+        <div className="overflow-hidden w-full sm:w-[600px] h-[400px] md:h-[500px] p-4  flex items-center justify-center sm:justify-end">
+          <img src={Picture1} className="object-contain " alt="" />
         </div>
       </div>
     </div>

@@ -83,7 +83,7 @@ const ContentSlider = () => {
         setSlideOrder((current) => rotateArrayToIndex(current, nextSlide));
         return nextSlide;
       });
-    }, 10000);
+    }, 5000);
 
     return () => clearInterval(timer);
   }, [slides.length]);

@@ -112,13 +112,13 @@
     @apply bg-background text-foreground;
   }
 }
-
+/* 
 .background-image {
   background-image: url("./assets/backgroundImage.png");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
-}
+} */
 
 /* Apply styles to the entire page or a specific container */
 .container {
