@@ -84,7 +84,7 @@ const HeroSlides: React.FC = () => {
                   alt=""
                 />
               </div>
-            </div>
+            </div>{" "}
           </SwiperSlide>
         ))}
       </Swiper>
