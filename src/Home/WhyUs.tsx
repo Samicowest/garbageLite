@@ -29,7 +29,7 @@ export function WhyUs() {
           <div className="py-2">
             <NavLink
               to="/why"
-              className="font-bold text-md lg:text-xl py-2 px-8 bg-primary text-slate-200 rounded-md"
+              className="bg-primary text-white text-center px-4 py-2 rounded-md cursor-pointer"
             >
               Show More...
             </NavLink>
