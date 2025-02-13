@@ -61,7 +61,7 @@ const HeroSlides: React.FC = () => {
               <div className="w-[80%]  bg-cover bg-no-repeat  sm:w-[50%] flex flex-col gap-4">
                 <div className="flex flex-col gap-4 text-center items-start sm:text-left">
                   <h2
-                    className="md:text-6xl tracking-widest font-mons min-w-[200px] max-w-[500px]   md:leading-snug  text-4xl text-white font-bold"
+                    className="md:text-6xl tracking-widest font-mons min-w-[200px] max-w-[550px]   md:leading-snug  text-4xl text-white font-bold"
                     style={{
                       textShadow: "1px 1px 2px #00458A",
                     }}
