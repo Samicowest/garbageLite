@@ -60,10 +60,10 @@ const HeroSlides: React.FC = () => {
             >
               <div className="w-[80%]  bg-cover bg-no-repeat  sm:w-[50%] flex flex-col gap-4">
                 <div className="flex flex-col gap-4 text-center items-start sm:text-left">
-                  <h2 className="md:text-5xl min-w-[350px] max-w-[450px]   md:leading-snug  text-4xl text-[#6AAF23] font-bold">
+                  <h2 className="md:text-5xl tracking-wider font-mons min-w-[350px] max-w-[450px]   md:leading-snug  text-4xl text-white font-bold">
                     {dat.title}
                   </h2>
-                  <p className="text-md md:text-xl 2xl:text-3xl font-semibold py-4 text-white">
+                  <p className="text-md md:text-xl 2xl:text-3xl font-pops font-semibold py-4 text-white">
                     {dat.desc}
                   </p>
                 </div>

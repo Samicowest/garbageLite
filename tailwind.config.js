@@ -8,6 +8,11 @@ export default {
         xm: "450px",
         xxm: "580px",
       },
+      fontFamily: {
+        sans: ["Roboto", "sans-serif"],
+        pops: ["Poppins", "serif"],
+        mons: ["Anton", "serif"],
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
