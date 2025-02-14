@@ -12,7 +12,7 @@ export function SectionNumbers({}) {
           </div>
           <div className="flex gap-4 items-center justify-center py-14 px-8 flex-col">
             <h2 className="font-extrabold text-[50px]">100%</h2>
-            <p className="text-center text-md md:text-2xl">Anticipate Rate</p>
+            <p className="text-center text-md md:text-2xl">Anticipation Rate</p>
           </div>
           <div className="flex gap-4 items-center justify-center py-14 px-8 flex-col">
             <h2 className="font-extrabold text-[50px]">85%</h2>

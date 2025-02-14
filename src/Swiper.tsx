@@ -21,7 +21,7 @@ const data: Dat[] = [
     id: 1,
     name: "Adebayo T.",
     title: "Ibadan",
-    desc: " GarbageLite has made waste management so simple! Scheduling pickups is a breeze, and I love knowing my recycling efforts are making a real difference. Highly recommended!.",
+    desc: "GarbageLite has made waste management so simple! Scheduling pickups is a breeze, and I love knowing my recycling efforts are making a real difference.",
     img: <img src={Img1} className="object-cover w-full h-full" alt="Samson" />,
   },
   {
@@ -43,7 +43,7 @@ const data: Dat[] = [
   {
     id: 4,
     name: "Tolu B.",
-    title: "Business Owner, Ibadan",
+    title: "Ibadan",
     desc: " Our business has reduced waste disposal costs significantly by using GarbageLite. The partnership opportunities and support are top-notch!",
     img: <img src={Img1} className="object-cover w-full h-full" alt="Samuel" />,
   },
@@ -77,7 +77,7 @@ const SwiperPage: React.FC = () => {
         {data.map((dat) => (
           <SwiperSlide key={dat.id}>
             <div className="py-8 px-8 bg-[#ECECEC] rounded-md">
-              <div className="flex flex-col ">
+              <div className="flex flex-col items-stretch ">
                 <p className="text-md md:text-xl  text-left text-light">
                   {dat.desc}
                 </p>
