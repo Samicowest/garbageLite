@@ -4,17 +4,20 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "./index.css";
 import Root from "./Root";
-import ErrorPage from "./ErrorPage";
-import Home from "./Home";
-import WhyUsPage from "./WhyusPage";
+// import Home from "./Home";
+// import WhyUsPage from "./WhyusPage";
 import { DataProvider } from "./service/context";
-import Login from "./Login";
-import Register from "./register";
-import HubSearch from "./HubSearch";
+// import HubSearch from "./HubSearch";
 import ProtectedRoute from "./ProtectedRoute";
 import { UserAuthProvider } from "./context/AuthContext";
-import FramerDisplay from "./Framer/FramerDisplay";
+import Spinner from "./components/Spinner";
 
+const Home = React.lazy(() => import("./Home"));
+const WhyUsPage = React.lazy(() => import("./WhyusPage"));
+const ErrorPage = React.lazy(() => import("./ErrorPage"));
+const HubSearch = React.lazy(() => import("./HubSearch"));
+const Login = React.lazy(() => import("./Login"));
+const Register = React.lazy(() => import("./Register"));
 // Define the type for routes
 const queryClient = new QueryClient();
 
@@ -54,11 +57,6 @@ export const router = createBrowserRouter([
     element: <Register />,
     errorElement: <ErrorPage />,
   },
-  {
-    path: "/framer",
-    element: <FramerDisplay />,
-    errorElement: <ErrorPage />,
-  },
 ]);
 
 // const Subscribed: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -89,7 +87,9 @@ ReactDOM.createRoot(rootElement).render(
     <QueryClientProvider client={queryClient}>
       <DataProvider>
         <UserAuthProvider>
-          <RouterProvider router={router} />
+          <React.Suspense fallback={<Spinner />}>
+            <RouterProvider router={router} />
+          </React.Suspense>
         </UserAuthProvider>
       </DataProvider>
     </QueryClientProvider>

@@ -82,10 +82,10 @@ const HeroSlides: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="overflow-hidden h-[300px]  md:h-[500px] ">
+              <div className="overflow-hidden h-[300px]  md:h-[500px] self-end flex ">
                 <img
                   src={dat.img}
-                  className="object-contain w-auto h-full"
+                  className="object-cover w-auto h-full self-end"
                   alt=""
                 />
               </div>

@@ -40,15 +40,23 @@ export function Footer() {
                 to="aboutus"
                 smooth={true}
                 duration={500}
-                className="test-sm "
+                className="text-md md:text-xl lg:text-2xl text-white "
               >
                 About Us
               </Link>
 
-              <NavLink to="/why" className="text-sm">
+              <NavLink
+                to="/why"
+                className="text-md md:text-xl lg:text-2xl text-white"
+              >
                 Why us
               </NavLink>
-              <Link to="faq" smooth={true} duration={500} className="test-sm ">
+              <Link
+                to="faq"
+                smooth={true}
+                duration={500}
+                className="text-md md:text-xl lg:text-2xl text-white "
+              >
                 FAQ's
               </Link>
             </div>
