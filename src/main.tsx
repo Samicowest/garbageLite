@@ -14,7 +14,7 @@ const WhyUsPage = React.lazy(() => import("./WhyusPage"));
 const ErrorPage = React.lazy(() => import("./ErrorPage"));
 const HubSearch = React.lazy(() => import("./HubSearch"));
 const Login = React.lazy(() => import("./Login"));
-const Register = React.lazy(() => import("./Register"));
+const Register = React.lazy(() => import("@/Register"));
 // Define the type for routes
 const queryClient = new QueryClient();
 

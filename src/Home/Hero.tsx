@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <div
       id="home"
-      className="background-image pt-[100px]  py-24 px-2 sm:px-8 lg:px-16 flex flex-col sm:flex-row justify-between  items-center"
+      className="background-image pt-[100px]   px-2 sm:px-8 lg:px-16 flex flex-col sm:flex-row justify-between  items-end"
     >
       <div className="w-[80%] border border-red-600 bg-[url('../assets/backgroundImage.png')] bg-cover bg-no-repeat  sm:w-[50%] flex flex-col items-center gap-4">
         <div className="flex flex-col gap-4 text-center items-start lg:items-center sm:text-left">
@@ -32,7 +32,7 @@ export function Hero() {
           </div>
         </div>
       </div>
-      <div className="w-[80%] sm:w-[50%]">
+      <div className="w-[80%] sm:w-[50%] border border-red-500">
         <div className="overflow-hidden w-[80%] h-auto">
           <img src={Heros} className="object-cover w-full h-auto" alt="" />
         </div>
