@@ -56,7 +56,7 @@ const HeroSlides: React.FC = () => {
             }}
           >
             <div
-              className={`pt-20 px-2 sm:px-8 lg:px-16 flex flex-col sm:flex-row justify-between bg-cover bg-center bg-[url(${dat.slideImg})] items-end`}
+              className={`pt-20 px-2 sm:px-8 lg:px-16 flex flex-col sm:flex-row justify-between bg-cover bg-center bg-[url(${dat.slideImg})] items-center md:items-end`}
             >
               <div className="w-[80%]  bg-cover bg-no-repeat  py-20 sm:w-[50%] flex flex-col gap-4">
                 <div className="flex flex-col gap-4 text-center items-start sm:text-left">
@@ -82,7 +82,7 @@ const HeroSlides: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="overflow-hidden p-0 h-[300px]  md:h-[500px] self-end flex">
+              <div className="overflow-hidden p-0 h-[300px]  md:h-[500px] self-center md:self-end flex">
                 <img
                   src={dat.img}
                   className="object-cover w-auto h-full self-end"
