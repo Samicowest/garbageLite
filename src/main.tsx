@@ -14,7 +14,7 @@ const WhyUsPage = React.lazy(() => import("./WhyusPage"));
 const ErrorPage = React.lazy(() => import("./ErrorPage"));
 const HubSearch = React.lazy(() => import("./HubSearch"));
 const Login = React.lazy(() => import("./Login"));
-const Register = React.lazy(() => import("./Register")); // Updated import path
+const Register = React.lazy(() => import("./Register/index")); // Updated import path
 
 const queryClient = new QueryClient();
 
