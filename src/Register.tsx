@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { auth, googleProvider } from "../firebaseConfig";
+import { auth, googleProvider } from "./firebaseConfig";
 import { signInWithPopup, createUserWithEmailAndPassword } from "firebase/auth";
 
 const Register: React.FC = () => {

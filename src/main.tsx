@@ -8,7 +8,7 @@ import { DataProvider } from "./service/context";
 import ProtectedRoute from "./ProtectedRoute";
 import { UserAuthProvider } from "./context/AuthContext";
 import Spinner from "./components/Spinner";
-import Register from "./Register";
+import Register from "./Register/Register";
 
 const Home = React.lazy(() => import("./Home"));
 const WhyUsPage = React.lazy(() => import("./WhyusPage"));
