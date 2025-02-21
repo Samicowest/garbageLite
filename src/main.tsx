@@ -14,8 +14,8 @@ const WhyUsPage = React.lazy(() => import("./WhyusPage"));
 const ErrorPage = React.lazy(() => import("./ErrorPage"));
 const HubSearch = React.lazy(() => import("./HubSearch"));
 const Login = React.lazy(() => import("./Login"));
-const Register = React.lazy(() => import("@/Register"));
-// Define the type for routes
+const Register = React.lazy(() => import("./Register")); // Updated import path
+
 const queryClient = new QueryClient();
 
 export const router = createBrowserRouter([
@@ -27,7 +27,6 @@ export const router = createBrowserRouter([
         element: <Home />,
         errorElement: <ErrorPage />,
       },
-
       {
         path: "/why",
         element: <WhyUsPage />,
@@ -55,24 +54,6 @@ export const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
 ]);
-
-// const Subscribed: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-//   const [user, setUser] = useState<any>(null);
-
-//   useEffect(() => {
-//     const unsubscribe = onAuthStateChanged(auth, (user) => {
-//       if (user) {
-//         setUser(user);
-//       } else {
-//         setUser(null);
-//       }
-//     });
-
-//     return () => unsubscribe();
-//   }, []);
-
-//   return <>{children}</>;
-// };
 
 const rootElement = document.getElementById("root");
 if (!rootElement) {
