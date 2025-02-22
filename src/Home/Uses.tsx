@@ -21,8 +21,8 @@ export function Uses() {
             </p>
           </div>
           <div className="flex gap-4 items-center justify-center sm:justify-start">
-            <div className="flex justify-start text-right">
-              <div className=" w-[400px] ">
+            <div className="flex justify-start text-right py-8">
+              <div className=" max-w-[400px] ">
                 <img src={Playstore} className="object-cover w-full" alt="" />
               </div>
             </div>

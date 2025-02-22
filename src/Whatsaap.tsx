@@ -27,7 +27,7 @@ const ScrollAwareBox: React.FC = () => {
 
   return (
     <a
-      href="https://wa.me/2348102897445"
+      href="https://wa.me/2349023446096"
       target="_blank"
       rel="noopener noreferrer"
       className={`fixed bottom-4 right-4 z-[99999] rounded-full flex gap-2 items-center bg-green-500 text-white p-4 shadow-lg transition-opacity duration-300 ${
