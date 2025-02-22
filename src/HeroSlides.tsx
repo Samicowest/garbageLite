@@ -47,6 +47,7 @@ const HeroSlides: React.FC = () => {
       >
         {data.map((dat) => (
           <SwiperSlide
+            key={dat.title}
             className={`w-full h-100vh`}
             style={{
               backgroundImage: `url(${dat.slideImg})`,

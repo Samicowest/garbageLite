@@ -7,7 +7,7 @@ const ErrorPage: React.FC = () => {
   return (
     <div className="h-screen flex flex-col items-center justify-center bg-gray-100 text-gray-800">
       <h1 className="text-4xl font-bold mb-4">Oops!</h1>
-      <p className="text-lg">Sorry, an unexpected error has occurred.</p>
+      <p className="text-lg">Sorry, you just entered an invalid url</p>
       <div className="py-4 flex justify-center">
         <Link
           to="/"

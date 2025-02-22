@@ -2,7 +2,12 @@ import { useEffect, useRef } from "react";
 import Logo from "./assets/logo.png";
 import { RiMenu3Line } from "react-icons/ri";
 import { Link } from "react-scroll";
-import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import {
+  NavLink,
+  useLocation,
+  useNavigate,
+  Link as LinkNav,
+} from "react-router-dom";
 import { useUserAuth } from "./context/AuthContext";
 import defaultImage from "./assets/default.png";
 import userImage from "./assets/person1.png";
@@ -85,9 +90,11 @@ export function Navbar() {
   return (
     <>
       <nav className="hidden fixed z-[99999] bg-white top-0 left-0 w-full lg:flex justify-between items-center px-16 py-3">
-        <div className="overflow-hidden w-[200px] h-auto">
-          <img className="object-cover w-full h-full" src={Logo} alt="logo" />
-        </div>
+        <LinkNav to="/" className="overflow-hidden w-[200px] h-auto">
+          <div className="overflow-hidden w-[200px] h-auto">
+            <img className="object-cover w-full h-full" src={Logo} alt="logo" />
+          </div>
+        </LinkNav>
         <div className="flex justify-between items-center gap-4">
           {isAct("/") ? (
             <Link
@@ -221,9 +228,15 @@ export function Navbar() {
       </nav>
       <div className="fixed z-[99999] bg-white top-0 left-0 w-full lg:hidden">
         <div className="relative justify-between items-center px-2 sm:px-8 py-3 flex">
-          <div className="overflow-hidden w-[200px] h-auto">
-            <img className="object-cover w-full h-full" src={Logo} alt="logo" />
-          </div>
+          <LinkNav to="/" className="overflow-hidden w-[200px] h-auto">
+            <div className="overflow-hidden w-[200px] h-auto">
+              <img
+                className="object-cover w-full h-full"
+                src={Logo}
+                alt="logo"
+              />
+            </div>
+          </LinkNav>
           <div
             className="hidden absolute top-[100%] bg-white left-0 right-0 px-2 sm:px-8 py-3 transition-navbar"
             ref={navbarRef}
