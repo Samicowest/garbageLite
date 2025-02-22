@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { auth, googleProvider } from "../firebaseConfig";
 import {
   signInWithPopup,
@@ -20,25 +22,56 @@ const Login: React.FC = () => {
     e.preventDefault();
     if (isRegistering) {
       if (password !== confirmPassword) {
-        alert("Passwords do not match");
+        toast.error("Password do not match", {
+          position: "top-center", // Position of the toast
+          autoClose: 5000, // Duration before auto-close (in milliseconds)
+          hideProgressBar: false, // Whether to hide the progress bar
+          closeOnClick: true, // Close the toast on click
+          pauseOnHover: true, // Pause the toast on hover
+        });
         return;
       }
       try {
         await createUserWithEmailAndPassword(auth, email, password);
-        alert("Registration successful");
+        toast.success("Registration Successful", {
+          position: "top-center", // Position of the toast
+          autoClose: 5000, // Duration before auto-close (in milliseconds)
+          hideProgressBar: false, // Whether to hide the progress bar
+          closeOnClick: true, // Close the toast on click
+          pauseOnHover: true, // Pause the toast on hover
+        });
         navigate(from, { replace: true });
       } catch (error) {
         console.error("Error registering:", error);
         alert("Error registering");
+        toast.success("Login Successfully!", {
+          position: "top-center", // Position of the toast
+          autoClose: 5000, // Duration before auto-close (in milliseconds)
+          hideProgressBar: false, // Whether to hide the progress bar
+          closeOnClick: true, // Close the toast on click
+          pauseOnHover: true, // Pause the toast on hover
+        });
       }
     } else {
       try {
         await signInWithEmailAndPassword(auth, email, password);
-        alert("Login successful");
+        toast.success("Login Successfully!", {
+          position: "top-center", // Position of the toast
+          autoClose: 5000, // Duration before auto-close (in milliseconds)
+          hideProgressBar: false, // Whether to hide the progress bar
+          closeOnClick: true, // Close the toast on click
+          pauseOnHover: true, // Pause the toast on hover
+        });
         navigate(from, { replace: true });
       } catch (error) {
         console.error("Error logging in:", error);
-        alert("Error logging in");
+        toast.error("Error Logging in", {
+          position: "top-center", // Position of the toast
+          autoClose: 5000, // Duration before auto-close (in milliseconds)
+          hideProgressBar: false, // Whether to hide the progress bar
+          closeOnClick: true, // Close the toast on click
+          pauseOnHover: true, // Pause the toast on hover
+        });
       }
     }
   };
@@ -46,11 +79,22 @@ const Login: React.FC = () => {
   const handleGoogleSignIn = async () => {
     try {
       await signInWithPopup(auth, googleProvider);
-      alert("Google Sign-In successful");
+      toast.success("Login Successfully", {
+        position: "top-center", // Position of the toast
+        autoClose: 5000, // Duration before auto-close (in milliseconds)
+        hideProgressBar: false, // Whether to hide the progress bar
+        closeOnClick: true, // Close the toast on click
+        pauseOnHover: true, // Pause the toast on hover
+      });
       navigate(from, { replace: true });
     } catch (error) {
-      console.error("Error with Google Sign-In:", error);
-      alert("Error with Google Sign-In");
+      toast.error("Error with Google Sign-In", {
+        position: "top-center", // Position of the toast
+        autoClose: 5000, // Duration before auto-close (in milliseconds)
+        hideProgressBar: false, // Whether to hide the progress bar
+        closeOnClick: true, // Close the toast on click
+        pauseOnHover: true, // Pause the toast on hover
+      });
     }
   };
 
@@ -127,6 +171,7 @@ const Login: React.FC = () => {
             : "Don't have an account? Register"}
         </button>
       </div>
+      <ToastContainer />
     </div>
   );
 };
